@@ -1,0 +1,6 @@
+# uim関連
+uim-toolbar &
+export GTK_IM_MODULE='uim'
+export QT_IM_MODULE='xim'
+uim-xim &
+export XMODIFIERS='@im=uim'
