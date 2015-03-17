@@ -8,5 +8,7 @@ install-home() {
   echo "$PWD/$1 --> $HOME/.$1"
 }
 
+install-home xprofile
 install-home bashrc
 install-home vimrc
+install-home uim
