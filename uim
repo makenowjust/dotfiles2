@@ -1,0 +1,12 @@
+; vim:set ft=scheme:
+(require-module "skk")
+
+(define skk-style 'skk-style-ddskk-like)
+
+
+(define skk-ja-rk-rule
+  (append '(
+            ((("z" " ") . ()) ("　" "　" "　"))
+            ((("z" "_") . ()) ("―" "―" "―"))
+           )
+          skk-ja-rk-rule))
