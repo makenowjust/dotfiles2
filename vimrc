@@ -57,8 +57,8 @@ set noswapfile
 set viewoptions=cursor,folds
 augroup SaveView
   autocmd!
-  autocmd BufWinLeave * silent mkview
-  autocmd BufWinEnter * silent loadview
+  autocmd BufWinLeave ?* silent mkview
+  autocmd BufWinEnter ?* silent loadview
 augroup END
 
 " シンタックスハイライトを有効に

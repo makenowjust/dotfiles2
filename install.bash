@@ -10,5 +10,6 @@ install-home() {
 
 install-home xprofile
 install-home bashrc
+mkdir -p "$HOME/.vim_backup"
 install-home vimrc
 install-home uim
