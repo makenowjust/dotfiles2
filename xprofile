@@ -1,6 +1,15 @@
 # uim関連
 uim-toolbar &
 export GTK_IM_MODULE='uim'
-export QT_IM_MODULE='xim'
+export QT_IM_MODULE='uim'
 uim-xim &
 export XMODIFIERS='@im=uim'
+
+# network manager
+nm-applet &
+
+# volume deamon
+xfce4-volumed
+
+# xdg-openで開くブラウザはopera
+export BROWSER=opera
