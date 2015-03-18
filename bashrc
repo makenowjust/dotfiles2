@@ -1,3 +1,9 @@
+# == 環境変数とかの設定 ==
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# == その他動作に関する設定 ==
+
 # ls系
 alias ls='ls --color'
 alias lsa='ls -a'
