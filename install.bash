@@ -8,8 +8,11 @@ install-home() {
   echo "$PWD/$1 --> $HOME/.$1"
 }
 
-install-home xprofile
 install-home bashrc
 mkdir -p "$HOME/.vim_backup"
 install-home vimrc
-install-home uim
+
+if [[ -n "$DISPLAY" ]]; then
+  install-home xprofile
+  install-home uim
+fi
