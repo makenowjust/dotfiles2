@@ -11,6 +11,7 @@ install-home() {
 install-home bashrc
 mkdir -p "$HOME/.vim_backup"
 install-home vimrc
+install-home gitconfig
 
 if [[ -n "$DISPLAY" ]]; then
   install-home xprofile
