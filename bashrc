@@ -1,8 +1,9 @@
-# == 環境変数とかの設定 ==
+# 環境設定の読み込み
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+DOTFILES="$HOME/dotfiles"
+source "$DOTFILES/bashenv"
 
-# == その他動作に関する設定 ==
+# == 動作に関する設定 ==
 
 # ls系
 alias ls='ls --color'
