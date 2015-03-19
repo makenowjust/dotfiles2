@@ -2,4 +2,4 @@
 	name = TSUYUSATO Kitsune
 	email = make.just.on@gmail.com
 [push]
-	default = matching
+	default = simple
