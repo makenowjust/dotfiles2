@@ -41,8 +41,9 @@ background() {
 default_color="\["$'\e'"[0m\]"
 
 # プロンプトの設定
+BGCOLOR=$([[ -x /.dockerinit ]] && echo "36" || echo "26")
 PS1=$'\n'
-PS1="$PS1\[\e[48;5;\$((\$? == 0 ? 26 : 161))m\]$(color 15) \u@\h $(background 238) \w $(background 240) \$(date +\"%Y/%m/%d %H:%M:%S\") ${default_color}"
+PS1="$PS1\[\e[48;5;\$((\$? == 0 ? $BGCOLOR : 161))m\]$(color 15) \u@\h $(background 238) \w $(background 240) \$(date +\"%Y/%m/%d %H:%M:%S\") ${default_color}"
 PS1="$PS1\n$(color 15)$(background 236) % ${default_color} "
 PS2="$(color 15)$(background 236) > ${default_color} "
 
