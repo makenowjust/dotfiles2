@@ -63,3 +63,5 @@ augroup END
 
 " シンタックスハイライトを有効に
 syntax on
+" ファイルの種類毎の処理を有効に
+filetype plugin indent on
