@@ -3,14 +3,19 @@
 set -e
 
 install-home() {
-  rm -f "$HOME/.$1"
-  ln -s "$PWD/$1" "$HOME/.$1"
+  rm -f "$HOME/.$1"                  && \
+  ln -s "$PWD/$1" "$HOME/.$1"        && \
   echo "$PWD/$1 --> $HOME/.$1"
 }
 
+make-directory() {
+  mkdir -p "$HOME/$1"                && \
+  echo "MAKE DIRECTORY --> $HOME/$1"
+}
+
 install-home bashrc
-mkdir -p "$HOME/.vim"
-mkdir -p "$HOME/.vim_backup"
+make-directory .vim
+make-directory .vim_backup
 install-home vimrc
 install-home gitconfig
 
