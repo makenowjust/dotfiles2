@@ -9,6 +9,7 @@ install-home() {
 }
 
 install-home bashrc
+mkdir -p "$HOME/.vim"
 mkdir -p "$HOME/.vim_backup"
 install-home vimrc
 install-home gitconfig
