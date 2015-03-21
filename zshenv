@@ -5,9 +5,6 @@
 # そのあとに追加された補完を読み込むために2回目のcompinitが必要になる
 skip_global_compinit=true
 
-# dotfilesを~/dotfilesに置く
-ZDOTDIR="$HOME/dotfiles"
-
 # nodebrew
 if [[ -d "$HOME/.nodebrew" ]]; then
   path+="$HOME/.nodebrew/current/bin"
