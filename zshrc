@@ -104,6 +104,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle mollifier/anyframe
 # Ctrl-hでヒストリを検索
 bindkey '^h' anyframe-widget-execute-history
+# Ctrl-x gでghqのディレクトリ移動
+bindkey '^xg' anyframe-widget-cd-ghq-repository
+bindkey '^x^g' anyframe-widget-cd-ghq-repository
 
 
 # == 補完関連 ==
