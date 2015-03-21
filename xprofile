@@ -13,3 +13,6 @@ xfce4-volumed
 
 # xdg-openで開くブラウザはopera
 export BROWSER=opera
+
+# mutate
+mutate &
