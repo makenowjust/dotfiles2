@@ -15,4 +15,5 @@ xfce4-volumed
 export BROWSER=opera
 
 # mutate
+rm -f /tmp/qipc_sharedmemory_*
 mutate &
