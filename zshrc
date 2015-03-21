@@ -91,6 +91,23 @@ alias sudo='sudo '
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+# Copy to here!  Move to here!
+alias ci='(){ mv $@ . }'
+alias mi='(){ mv $@ . }'
+
+# git系
+alias gst='git status'
+alias gcm='git commit'
+alias gcmm='gcm -m'
+alias gcma='gcm -a'
+alias gcmam='gcm -am'
+alias gad='git add'
+alias gps='git push'
+alias gco='git checkout'
+alias gcob='gco -b'
+alias gbc='git branch'
+alias gtag='git tag'
+alias gdiff='git diff'
 
 
 # antigenの設定
