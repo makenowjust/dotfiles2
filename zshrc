@@ -84,7 +84,7 @@ alias ..='popd'
 # mkdirで深いディレクトリを掘れるようにする
 alias mkdir='mkdir -p'
 # mkdir + cd = take
-alias take='(){ mkdir -p $1; cd $1 }'
+alias take='(){ mkdir -p $1 && cd $1 }'
 # sudoのあとでエイリアスを有効にする
 alias sudo='sudo '
 # 安全対策
@@ -92,8 +92,10 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 # Copy to here!  Move to here!
-alias ci='(){ mv $@ . }'
-alias mi='(){ mv $@ . }'
+alias ch='(){ mv $@ . }'
+alias mh='(){ mv $@ . }'
+# メモリのキャッシュを削除
+alias cache_clear='sync && sudo sysctl -w vm.drop_caches=3'
 
 # git系
 alias gst='git status'
