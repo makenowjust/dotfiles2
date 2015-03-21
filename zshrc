@@ -78,7 +78,7 @@ alias ls='ls -F --color'
 # cd後にlsを実行
 # （zshのフックで実行しないのは、読み込みが遅いディスクのときに
 # \cdで無効にできるようにするため）
-alias cd='(){ cd $1 && ls }'
+alias cd='(){ cd $@ && ls }'
 # .. = popd
 alias ..='popd'
 # mkdirで深いディレクトリを掘れるようにする
@@ -105,8 +105,7 @@ antigen bundle mollifier/anyframe
 # Ctrl-hでヒストリを検索
 bindkey '^h' anyframe-widget-execute-history
 # Ctrl-x gでghqのディレクトリ移動
-bindkey '^xg' anyframe-widget-cd-ghq-repository
-bindkey '^x^g' anyframe-widget-cd-ghq-repository
+bindkey '^g' anyframe-widget-cd-ghq-repository
 
 
 # == 補完関連 ==
