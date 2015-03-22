@@ -120,18 +120,22 @@ alias gdiff='git diff'
 
 
 # antigenの設定
-# 読み込み
-source "$ZDOTDIR/antigen/antigen.zsh"
+# version 5.0.0以上のときのみにする
+autoload -Uz is-at-least
+if is-at-least 5.0.0; then
+  # 読み込み
+  source "$ZDOTDIR/antigen/antigen.zsh"
 
-# シンタックスハイライト
-antigen bundle zsh-users/zsh-syntax-highlighting
+  # シンタックスハイライト
+  antigen bundle zsh-users/zsh-syntax-highlighting
 
-# pecoを便利にする
-antigen bundle mollifier/anyframe
-# Ctrl-hでヒストリを検索
-bindkey '^h' anyframe-widget-execute-history
-# Ctrl-x gでghqのディレクトリ移動
-bindkey '^g' anyframe-widget-cd-ghq-repository
+  # pecoを便利にする
+  antigen bundle mollifier/anyframe
+  # Ctrl-hでヒストリを検索
+  bindkey '^h' anyframe-widget-execute-history
+  # Ctrl-x gでghqのディレクトリ移動
+  bindkey '^g' anyframe-widget-cd-ghq-repository
+fi
 
 
 # == 補完関連 ==
