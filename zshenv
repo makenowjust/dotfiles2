@@ -28,6 +28,11 @@ if [[ -d $HOME/.govm ]]; then
   path+=($GOROOT/bin $GOPATH/bin)
 fi
 
+# phpbrew
+if [[ -d $HOME/.phpbrew ]]; then
+  source $HOME/.phpbrew/bashrc
+fi
+
 # direnv
 type direnv >&/dev/null && eval "$(direnv hook bash)"
 
