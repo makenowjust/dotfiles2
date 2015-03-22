@@ -46,14 +46,16 @@ setopt pushd_silent
 setopt no_beep
 # !でヒストリを展開しない
 setopt no_bang_hist
+# 対話環境でもコメントを有効にする
+setopt interactive_comments
 
-# == ヒストリ関連 ==
+# == 履歴関連 ==
 
-# ヒストリを保存するファイルの場所
+# 履歴を保存するファイルの場所
 export HISTFILE=$ZDOTDIR/.zsh_history
-# メモリに保存されるヒストリの件数
+# メモリに保存される履歴の件数
 export HISTSIZE=100000
-# ファイルに保存されるヒストリの件数
+# ファイルに保存される履歴の件数
 export SAVEHIST=100000
 
 # 重複を記録しない
@@ -63,9 +65,11 @@ setopt hist_ignore_all_dups
 setopt extended_history
 # すぐにファイルに保存する
 setopt inc_append_history
-# スペースから始まる場合はヒストリに保存しない
+# スペースから始まる場合は履歴に保存しない
 setopt hist_ignore_space
-# プロセス間でヒストリを共有する
+# 履歴の冗長なスペースを削除
+setopt hist_reduce_blanks
+# プロセス間で履歴を共有する
 setopt share_history
 
 
