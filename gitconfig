@@ -7,3 +7,5 @@
 [ghq]
   root = ~/project/ghq
   root = ~/project/go/src
+[core]
+	editor = vim
