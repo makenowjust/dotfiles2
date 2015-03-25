@@ -96,7 +96,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 # Copy to here!  Move to here!
-alias ch='(){ mv $@ . }'
+alias ch='(){ cp $@ . }'
 alias mh='(){ mv $@ . }'
 # メモリのキャッシュを削除
 alias cache_clear='sync && sudo sysctl -w vm.drop_caches=3'
