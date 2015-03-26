@@ -78,7 +78,7 @@ setopt share_history
 # clearよりclsの方が好き（DOS脳）
 alias cls='clear'
 # lsを色付け
-alias ls='ls -F --color'
+alias ls='ls -F --color=auto'
 # cd後にlsを実行
 # （zshのフックで実行しないのは、読み込みが遅いディスクのときに
 # \cdで無効にできるようにするため）
