@@ -1,6 +1,9 @@
 #!/bin/zsh
 # == 環境変数とかの設定 ==
 
+# DOTFILESはZDOTDIRと同じ
+export DOTFILES=$ZDOTDIR
+
 # これが無いと、システムのzshrc読み込み時にcompinitされて、
 # そのあとに追加された補完を読み込むために2回目のcompinitが必要になる
 skip_global_compinit=true

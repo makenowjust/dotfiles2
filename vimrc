@@ -1,3 +1,6 @@
+" vim-tinyとかvim-smallで警告が出まくるので死ぬのを防ぐ
+if !1 | finish | endif
+
 " Vi互換にしない
 set nocompatible
 
@@ -61,7 +64,30 @@ augroup SaveView
   autocmd BufWinEnter ?* silent loadview
 augroup END
 
+" NeoBundleの設定
+if has('vim_starting')
+  set rtp+=$DOTFILES/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('$DOTFILES/bundle/'))
+
+" NeoBundle自身をNeoBundleで管理
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" 言語系
+
+" Jade
+NeoBundle 'digitaltoad/vim-jade'
+
+" Stylus
+NeoBundle 'wavded/vim-stylus'
+
+" NeoBundleここまで
+call neobundle#end()
+
 " シンタックスハイライトを有効に
 syntax on
 " ファイルの種類毎の処理を有効に
 filetype plugin indent on
+
+" NeoBundleでそれぞれインストールされているかチェック
+NeoBundleCheck
