@@ -11,6 +11,12 @@ skip_global_compinit=true
 # ホームディレクトリ直下のbinをパスに追加
 path+=$HOME/bin
 
+# ダイナミックリンクするライブラリのパスを設定
+typeset -xTU LD_LIBRARY_PATH ld_library_path
+ld_library_path+=/usr/local/lib
+typeset -xTU LD_RUN_PATH ld_run_path
+ld_run_path+=/usr/local/lib
+
 # nodebrew
 if [[ -d $HOME/.nodebrew ]]; then
   path+=$HOME/.nodebrew/current/bin
