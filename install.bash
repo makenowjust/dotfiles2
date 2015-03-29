@@ -36,6 +36,7 @@ install-home vimrc
 install-home gitconfig
 
 if [[ -n "$DISPLAY" ]]; then
+  install-home xsessionrc
   install-home xprofile
   install-home uim
 fi
