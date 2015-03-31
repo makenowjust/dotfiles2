@@ -11,9 +11,13 @@ nm-applet &
 # volume deamon
 xfce4-volumed
 
+# dropbox
+dropbox start
+
 # xdg-openで開くブラウザはopera
 export BROWSER=opera
 
 # mutate
 rm -f /tmp/qipc_sharedmemory_*
 mutate &
+
