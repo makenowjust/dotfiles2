@@ -8,6 +8,9 @@ export DOTFILES=$ZDOTDIR
 # そのあとに追加された補完を読み込むために2回目のcompinitが必要になる
 skip_global_compinit=true
 
+# これが無いとlightline.vimで残念になる
+export TERM=xterm-256color
+
 # ホームディレクトリ直下のbinをパスに追加
 path+=$HOME/bin
 
