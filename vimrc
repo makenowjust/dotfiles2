@@ -73,6 +73,9 @@ call neobundle#begin(expand('$DOTFILES/bundle/'))
 " NeoBundle自身をNeoBundleで管理
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" statuslineをかっこよくする
+NeoBundle 'itchyny/lightline.vim'
+
 " 言語系
 
 " Jade
