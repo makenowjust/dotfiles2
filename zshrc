@@ -18,7 +18,7 @@ function background() {
 default_color="%{"$'\e'"[0m%}"
 
 # プロンプトの設定
-BGCOLOR=$([[ -x /.dockerinit ]] && echo "36" || echo "26")
+BGCOLOR=$(is_docker && echo "36" || echo "26")
 PROMPT=$'\n'
 # 1行目
 PROMPT="$PROMPT%{"$'\e'"[48;5;%(?.$BGCOLOR.161)m%}$(color 15) %n@%M "
@@ -89,7 +89,8 @@ alias ..='popd'
 alias mkdir='mkdir -p'
 # mkdir + cd = take
 alias take='(){ mkdir -p $1 && cd $1 }'
-# sudoのあとでエイリアスを有効にする
+# echo, sudoのあとでエイリアスを有効にする
+alias echo='echo '
 alias sudo='sudo '
 # 安全対策
 alias rm='rm -i'
@@ -120,25 +121,8 @@ alias gbc='git branch'
 alias gtag='git tag'
 alias gdiff='git diff'
 
-
 # antigenの設定
-# version 5.0.0以上のときのみにする
-autoload -Uz is-at-least
-if is-at-least 5.0.0; then
-  # 読み込み
-  source "$ZDOTDIR/antigen/antigen.zsh"
-
-  # シンタックスハイライト
-  antigen bundle zsh-users/zsh-syntax-highlighting
-
-  # pecoを便利にする
-  antigen bundle mollifier/anyframe
-  # Ctrl-hでヒストリを検索
-  bindkey '^h' anyframe-widget-execute-history
-  # Ctrl-x gでghqのディレクトリ移動
-  bindkey '^g' anyframe-widget-cd-ghq-repository
-fi
-
+source $ZDOTDIR/zsh/antigen.zsh
 
 # == 補完関連 ==
 autoload -Uz compinit

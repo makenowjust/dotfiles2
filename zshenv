@@ -1,4 +1,10 @@
 #!/bin/zsh
+
+# Docker上かどうか判定する関数
+function is_docker() {
+  [[ -x /.dockerinit ]]
+}
+
 # == 環境変数とかの設定 ==
 
 # DOTFILESはZDOTDIRと同じ
