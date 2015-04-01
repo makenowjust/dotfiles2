@@ -5,14 +5,14 @@ export QT_IM_MODULE='uim'
 uim-xim &
 export XMODIFIERS='@im=uim'
 
+# dropbox
+dropbox start
+
 # network manager
 nm-applet &
 
 # volume deamon
 xfce4-volumed
-
-# dropbox
-dropbox start
 
 # xdg-openで開くブラウザはopera
 export BROWSER=opera
