@@ -78,6 +78,9 @@ NeoBundle 'itchyny/lightline.vim'
 
 " 言語系
 
+" Dart
+NeoBundle 'dart-lang/dart-vim-plugin'
+
 " Jade
 NeoBundle 'digitaltoad/vim-jade'
 
