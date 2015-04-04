@@ -78,6 +78,9 @@ NeoBundle 'itchyny/lightline.vim'
 
 " 言語系
 
+" Go言語
+NeoBundle 'fatih/vim-go'
+
 " Dart
 NeoBundle 'dart-lang/dart-vim-plugin'
 
