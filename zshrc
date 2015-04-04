@@ -101,6 +101,8 @@ alias ch='(){ cp $@ . }'
 alias mh='(){ mv $@ . }'
 # /bin/openとか使わないから
 alias open='xdg-open'
+# xclip使うとしたらこっちだよなぁ
+alias xclip='xclip -selection clipboard'
 # メモリのキャッシュを削除
 alias cache_clear='sync && sudo sysctl -w vm.drop_caches=3'
 
