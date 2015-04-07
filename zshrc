@@ -132,7 +132,7 @@ if [[ -f $ZDOTDIR/antigen/antigen.zsh ]]; then
   antigen bundle zsh-users/zsh-syntax-highlighting
 
   # pecoを便利にする
-  if which zsh >&/dev/null; then
+  if which peco >&/dev/null; then
     antigen bundle mollifier/anyframe
     # Ctrl-hでヒストリを検索
     bindkey '^h' anyframe-widget-execute-history
