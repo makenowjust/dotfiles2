@@ -5,6 +5,9 @@ export QT_IM_MODULE='uim'
 uim-xim &
 export XMODIFIERS='@im=uim'
 
+# 透過ウィンドウ
+xcompmgr &
+
 # dropbox
 dropbox start
 
