@@ -124,7 +124,22 @@ alias gtag='git tag'
 alias gdiff='git diff'
 
 # antigenの設定
-source $ZDOTDIR/zsh/antigen.zsh
+if [[ -f $ZDOTDIR/antigen/antigen.zsh ]]; then
+  # 読み込み
+  source $ZDOTDIR/antigen/antigen.zsh
+
+  # シンタックスハイライト
+  antigen bundle zsh-users/zsh-syntax-highlighting
+
+  # pecoを便利にする
+  if which zsh >&/dev/null; then
+    antigen bundle mollifier/anyframe
+    # Ctrl-hでヒストリを検索
+    bindkey '^h' anyframe-widget-execute-history
+    # Ctrl-x gでghqのディレクトリ移動
+    bindkey '^g' anyframe-widget-cd-ghq-repository
+  fi
+fi
 
 # == 補完関連 ==
 autoload -Uz compinit
