@@ -51,6 +51,12 @@ if [[ -d $HOME/.phpbrew ]]; then
   source $HOME/.phpbrew/bashrc
 fi
 
+# ocamlbrew
+if [[ -d $HOME/ocamlbrew ]]; then
+  # 一番最新のバージョンのOCamlを読み込む
+  source $HOME/ocamlbrew/ocaml-*/etc/ocamlbrew.bashrc(^on[1])
+fi
+
 # direnv
 type direnv >&/dev/null && eval "$(direnv hook bash)"
 
