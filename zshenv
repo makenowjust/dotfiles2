@@ -29,6 +29,7 @@ ld_run_path+=/usr/local/lib
 # nodebrew
 if [[ -d $HOME/.nodebrew ]]; then
   path+=$HOME/.nodebrew/current/bin
+  fpath+=$HOME/.nodebrew/completions/zsh
 fi
 
 # rbenv
