@@ -144,6 +144,9 @@ fi
 # == 補完関連 ==
 autoload -Uz compinit
 compinit
+if type npm >&/dev/null; then
+  eval "$(npm completion)"
+fi
 
 # キャッシュを使う
 zstyle ':completion::complete:*' use-cache true
