@@ -122,6 +122,24 @@ alias gcob='gco -b'
 alias gbc='git branch'
 alias gtag='git tag'
 alias gdiff='git diff'
+alias gm='git merge'
+alias gmf='gm --ff-only'
+alias ginit='git init'
+function gremote-github() {
+  name=$1
+  repo=$2
+
+  if [[ -z "$name" ]]; then
+    echo "gremote-github [name] <repo>" 1>&2
+    return 1
+  fi
+  if [[ -z "$repo" ]]; then
+    repo=$name
+    name="origin"
+  fi
+
+  git remote add $name "https://github.com/${repo}.git"
+}
 
 # antigenの設定
 if [[ -f $ZDOTDIR/antigen/antigen.zsh ]]; then
