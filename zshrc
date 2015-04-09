@@ -150,7 +150,7 @@ if [[ -f $ZDOTDIR/antigen/antigen.zsh ]]; then
   antigen bundle zsh-users/zsh-syntax-highlighting
 
   # pecoを便利にする
-  if which peco >&/dev/null; then
+  if type peco >&/dev/null; then
     antigen bundle mollifier/anyframe
     # Ctrl-hでヒストリを検索
     bindkey '^h' anyframe-widget-execute-history
@@ -162,6 +162,9 @@ fi
 # == 補完関連 ==
 autoload -Uz compinit
 compinit
+if type npm >&/dev/null; then
+  eval "$(npm completion)"
+fi
 
 # キャッシュを使う
 zstyle ':completion::complete:*' use-cache true
