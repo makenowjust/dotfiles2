@@ -20,7 +20,3 @@ xfce4-volumed
 # xdg-openで開くブラウザはopera
 export BROWSER=opera
 
-# mutate
-rm -f /tmp/qipc_sharedmemory_*
-mutate &
-
