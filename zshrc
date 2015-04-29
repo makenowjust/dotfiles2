@@ -107,7 +107,7 @@ alias xclip='xclip -selection clipboard'
 alias cache_clear='sync && sudo sysctl -w vm.drop_caches=3'
 
 # git系
-alias gst='git status'
+alias gst='git status -s -b'
 alias gcm='git commit'
 alias gcmm='gcm -m'
 alias gcma='gcm -a'
@@ -125,6 +125,7 @@ alias gdiff='git diff'
 alias gm='git merge'
 alias gmf='gm --ff-only'
 alias ginit='git init'
+alias ghelp='git help'
 function gremote-github() {
   name=$1
   repo=$2
