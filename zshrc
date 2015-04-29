@@ -24,7 +24,7 @@ PROMPT=$'\n'
 PROMPT="$PROMPT%{"$'\e'"[48;5;%(?.$BGCOLOR.161)m%}$(color 15) %n@%M "
 PROMPT="$PROMPT$(background 242) %? "
 PROMPT="$PROMPT$(background 240) %D{%Y/%m/%d %H:%M:%S} "
-PROMPT="$PROMPT$(background 238) %\$((\$COLUMNS - 50))<...<%~%<< ${default_color}"
+PROMPT="$PROMPT$(background 238) %\$((\$COLUMNS - 55))<...<%~%<< ${default_color}"
 # 2行目
 PROMPT="$PROMPT"$'\n'"$(color 15)$(background 236) %# ${default_color} "
 # 行継続時のプロンプト
