@@ -1,11 +1,19 @@
+# userの設定
 [user]
 	name = TSUYUSATO Kitsune
 	email = make.just.on@gmail.com
+
 [push]
 	default = simple
+[core]
+	editor = vim
 
+# pushのときにhttpが指定されていようとsshを使う
+[url "git@github.com:"]
+  pushInsteadOf = git://github.com
+  pushInsteadOf = https://github.com/
+
+# ghqの設定
 [ghq]
   root = ~/project/ghq
   root = ~/project/go/src
-[core]
-	editor = vim
