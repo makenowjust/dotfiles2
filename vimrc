@@ -76,9 +76,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " statuslineをかっこよくする
 NeoBundle 'itchyny/lightline.vim'
 
+" editorconfig （あまり信用してない）
+NeoBundle 'editorconfig/editorconfig-vim'
+
 " 言語系
 
 " Go言語
+let g:go_fmt_fail_silently = 1
 NeoBundle 'fatih/vim-go'
 
 " Dart
