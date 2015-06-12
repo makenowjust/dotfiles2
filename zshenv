@@ -58,6 +58,11 @@ if [[ -d $HOME/ocamlbrew ]]; then
   source $HOME/ocamlbrew/ocaml-*/etc/ocamlbrew.bashrc(^on[1])
 fi
 
+# cabal
+if [[ -d $HOME/.cabal ]]; then
+  path=($HOME/.cabal/bin $path)
+fi
+
 # direnv
 type direnv >&/dev/null && eval "$(direnv hook bash)"
 
