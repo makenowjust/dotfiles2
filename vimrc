@@ -79,6 +79,26 @@ NeoBundle 'itchyny/lightline.vim'
 " editorconfig （あまり信用してない）
 NeoBundle 'editorconfig/editorconfig-vim'
 
+" vimproc
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\   'windows' : 'tools\\update-dll-mingw',
+\   'cygwin' : 'make -f make_cygwin.mak',
+\   'mac' : 'make -f make_mac.mak',
+\   'linux' : 'make',
+\   'unix' : 'gmake',
+\  },
+\ }
+
+" vimshell
+NeoBundle 'Shougo/vimshell.vim'
+
+" QuickRun
+NeoBundle "thinca/vim-quickrun"
+
+" Unite
+NeoBundle "Shougo/unite.vim"
+
 " 言語系
 
 " Go言語
