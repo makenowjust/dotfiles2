@@ -155,6 +155,8 @@ if [[ -f $ZDOTDIR/antigen/antigen.zsh ]]; then
     antigen bundle mollifier/anyframe
     # Ctrl-hでヒストリを検索
     bindkey '^h' anyframe-widget-execute-history
+    # Ctrl-hでヒストリを検索して、現在のテキストに挿入
+    bindkey '^p' anyframe-widget-put-history
     # Ctrl-x gでghqのディレクトリ移動
     bindkey '^g' anyframe-widget-cd-ghq-repository
   fi
