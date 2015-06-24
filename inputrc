@@ -1,0 +1,3 @@
+# C-→, C-←でword単位で移動
+"\C-\e[C": backward-word
+"\C-\e[D": forward-word

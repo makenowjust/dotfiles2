@@ -34,6 +34,7 @@ make-directory .vim
 make-directory .vim_backup
 install-home vimrc
 install-home gitconfig
+install-home inputrc
 
 if [[ -n "$DISPLAY" ]]; then
   install-home xsessionrc
