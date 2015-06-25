@@ -142,6 +142,13 @@ function gremote-github() {
   git remote add $name "https://github.com/${repo}.git"
 }
 
+
+# bindkey関連
+bindkey -e
+# Ctrl-Left/Rightでword単位で移動
+bindkey ";5C" forward-word
+bindkey ";5D" backward-word
+
 # antigenの設定
 if [[ -f $ZDOTDIR/antigen/antigen.zsh ]]; then
   # 読み込み
