@@ -25,6 +25,7 @@ typeset -xTU LD_LIBRARY_PATH ld_library_path
 ld_library_path+=/usr/local/lib
 typeset -xTU LD_RUN_PATH ld_run_path
 ld_run_path+=/usr/local/lib
+typeset -xTU DYLD_LIBRARY_PATH dyld_library_path
 
 # nodebrew
 if [[ -d $HOME/.nodebrew ]]; then
@@ -65,4 +66,9 @@ fi
 
 # direnv
 type direnv >&/dev/null && eval "$(direnv hook bash)"
+
+# Torch 7
+path+=~/bin/torch/install/bin
+ld_library_path+=~/bin/torch/install/lib
+dyld_library_path+=~/bin/torch/install/lib
 
