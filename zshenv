@@ -68,7 +68,8 @@ fi
 type direnv >&/dev/null && eval "$(direnv hook bash)"
 
 # Torch 7
-path+=~/bin/torch/install/bin
-ld_library_path+=~/bin/torch/install/lib
-dyld_library_path+=~/bin/torch/install/lib
-
+if [[ -d $HOME/bin/torch ]]; then
+  path+=~/bin/torch/install/bin
+  ld_library_path+=~/bin/torch/install/lib
+  dyld_library_path+=~/bin/torch/install/lib
+fi
